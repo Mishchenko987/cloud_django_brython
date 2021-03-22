@@ -1,0 +1,16 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Include the brython javascript resources -->
+    <!-- This is standard Brython distribution, of course this files can be loaded from any CDN -->
+    <script type="text/javascript" src="{% static 'django_brython/js/brython.js' %}"></script>
+    <script type="text/javascript" src="{% static 'django_brython/js/brython_stdlib.js' %}"></script>
+    <script type="text/python" src="/brython/frontend/main.py"></script>
+  </head>
+  <!-- Initialize Brython, with the path prefix what you specified earlier in urls.py -->
+  <body onload="brython({debug: 1, pythonpath: ['/brython/']})">
+    Index
+  </body>
+</html>
